@@ -8,7 +8,6 @@ const bcrypt = require("bcrypt");
 const User = require("../models/User");
 const Project = require ("../models/Project");
 const Comments = require ("../models/Comments");
-const Project = require ("../models/Project");
 const Rate = require ("../models/Rate");
 
 const bcryptSalt = 10;

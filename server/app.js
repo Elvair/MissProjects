@@ -80,7 +80,9 @@ app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 // default value for title local
 app.locals.title = 'Express - Generated with IronGenerator';
 
+const api = require('./routes/index');
 
+app.use('/api',api);
 
 const authRouter = require('./routes/auth');
 // const genericCrud = require('./routes/genericCRUD');

@@ -1,16 +1,27 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './home.css';
+import axios from 'axios';
 
-class home extends Component {          //
-    constructor(props) {
-        super(props);
-        this.state = this.home;
+class home extends Component { 
+
+    state = {
+        listItem:[]
+    };
+
+    getProjects() {
+        axios.get('http://localhost:3010/api/')
+        .then(function (response) {
+            console.log(response)
+            if(response!==undefined){
+                this.setState({listItem: response.data});
+            }
+        
+      })
     }
 
-
     render() {
-        return (
+            return (
             <div id="main">
                 <header>
                     <div className="wrapper">
