@@ -6,6 +6,10 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
 const User = require("../models/User");
+const Project = require ("../models/Project");
+const Comments = require ("../models/Comments");
+const Project = require ("../models/Project");
+const Rate = require ("../models/Rate");
 
 const bcryptSalt = 10;
 
@@ -29,6 +33,29 @@ let users = [
   }
 ]
 
+let projects = [
+  {
+    templates: "searcher",
+    code: "<h1>Searcher</h1>"
+    
+  },
+  {
+    templates: "onlineService",
+    code: "<h1>Online Service</h1>"
+    
+  },
+  {
+    templates: "socialNetwork",
+    code: "<h1>Social Network</h1>"
+    
+  },
+  {
+    templates: "onlineShop",
+    code: "<h1>Online Shop</h1>"
+    
+  }
+]
+
 User.deleteMany()
 .then(() => {
   return User.create(users)
@@ -36,6 +63,14 @@ User.deleteMany()
 .then(usersCreated => {
   console.log(`${usersCreated.length} users created with the following id:`);
   console.log(usersCreated.map(u => u._id));
+})
+Project.deleteMany()
+.then(() => {
+  return Project.create(projects)
+})
+.then(projectCreated => {
+  console.log(`${projectCreated.length} users created with the following id:`);
+  console.log(projectCreated.map(u => u._id));
 })
 .then(() => {
   // Close properly the connection to Mongoose

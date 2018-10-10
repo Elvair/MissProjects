@@ -3,6 +3,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import AuthService from '../auth/AuthService';
+import './navbar.css';
 
 class Navbar extends Component {
   constructor(props) {

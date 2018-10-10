@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Switch, Route, Link } from 'react-router-dom';
+import Home from './components/home/home';
 
 // import ProjectList from './components/projects/ProjectList';
 import Navbar from './components/navbar/Navbar';
@@ -65,6 +66,7 @@ class App extends Component {
           <header className="App-header">
             <Navbar userInSession={this.state.loggedInUser} logout={this.logout} />
             <Switch>
+              <Route exact path='/home' render={() => <Home />}/>
               <Route exact path='/signup' render={() => <Signup getUser={this.getTheUser}/>}/>
               <Route exact path='/login' render={() => <Login getUser={this.getTheUser}/>}/>
             </Switch>

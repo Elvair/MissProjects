@@ -1,0 +1,19 @@
+.nav-style {
+    background-color: rgb(25, 26, 78);
+    color: rgb(27, 71, 121);
+}
+
+ul {
+    display: inline-flex;
+    list-style-type: none;
+    text-align: right;
+}
+
+li {
+    padding: 20px;
+    
+}
+
+li a {
+    color:white;
+}
