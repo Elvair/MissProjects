@@ -3,30 +3,34 @@ import { Link } from 'react-router-dom';
 import './home.css';
 import axios from 'axios';
 
+
 class home extends Component { 
 
-    state = {
-        listItem:[]
-    };
+    constructor(props) {
+        super(props);
+        this.state = {
+          posts: [],
+          loading: true,
+        };
+      }
 
-    getProjects() {
+      componentDidMount() {
         axios.get('http://localhost:3010/api/')
-        .then(function (response) {
-            console.log(response)
-            if(response!==undefined){
-                this.setState({listItem: response.data});
-            }
+        .then( (response) => {
+            console.log(response.data)
+                this.setState({ posts: response.data });
         
       })
-    }
+      }
 
     render() {
             return (
             <div id="main">
+            { this.state.posts[0] !== undefined ? this.state.posts.map(x=><p>{x.templates}</p>) : ''}
                 <header>
                     <div className="wrapper">
                         <nav>
-                            <h2>Main Navigation</h2>
+                            <h1>Main Navigation</h1>
                             <ul>
                                 <li><a href="#">Home</a></li>
                                 <li><a href="#">Templates</a></li>
