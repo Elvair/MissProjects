@@ -10,7 +10,8 @@ import Signup from './components/auth/Signup';
 import Login from './components/auth/Login';
 import AuthService from './components/auth/AuthService';
 import Contents from './components/contents/Contents'
-//import home from './components/contents/home/home';
+
+import templates from './components/templates/templates';
 
 
 class App extends Component {
@@ -69,7 +70,7 @@ class App extends Component {
             <Navbar userInSession={this.state.loggedInUser} logout={this.logout} />
             <Switch>
               <Route exact path='/home' render={() => <Home />}/>
-              {/* <Route exact path='/templates' render={() => <Templates />}/> */}
+              <Route exact path='/templates' render={() => <templates />}/>
               <Route exact path='/signup' render={() => <Signup getUser={this.getTheUser}/>}/>
               <Route exact path='/login' render={() => <Login getUser={this.getTheUser}/>}/>
             </Switch>

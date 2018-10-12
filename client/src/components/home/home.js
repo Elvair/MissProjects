@@ -15,7 +15,7 @@ class home extends Component {
       }
 
       componentDidMount() {
-        axios.get('http://localhost:3010/api/')
+        axios.get('http://localhost:3010/')
         .then( (response) => {
             console.log(response.data)
                 this.setState({ posts: response.data });
