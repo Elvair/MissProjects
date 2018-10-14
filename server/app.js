@@ -85,10 +85,12 @@ const api = require('./routes/index');
 app.use('/',api);
 
 const authRouter = require('./routes/auth');
-const contentsRouter = require ('./routes/contents')
+const projectTemplateRouter = require('./routes/projectTemplate');
+//const contentsRouter = require ('./routes/contents')
 // const genericCrud = require('./routes/genericCRUD');
 app.use('/auth', authRouter);
-app.use('/contents/',contentsRouter);
+app.use('/projectTemplate',projectTemplateRouter);
+//app.use('/contents/',contentsRouter);
 // app.use('/api/news', genericCrud(require('./models/News')));
 // app.use('/api/user', genericCrud(require('./models/User')));
 

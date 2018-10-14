@@ -15,7 +15,7 @@ class templates extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:3010/templates')
+        axios.get('http://localhost:3010/project')
             .then((response) => {
                 console.log(response.data)
                 this.setState({ posts: response.data });

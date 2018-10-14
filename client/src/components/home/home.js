@@ -27,7 +27,7 @@ class home extends Component {
             return (
             <div id="main">
             { this.state.posts[0] !== undefined ? this.state.posts.map(x=><p>{x.templates}</p>) : ''}
-                <header>
+                {/* <header>
                     <div className="wrapper">
                         <nav>
                             <h1>Main Navigation</h1>
@@ -38,7 +38,7 @@ class home extends Component {
                             </ul>
                         </nav>
                     </div>
-                </header>
+                </header> */}
             </div>
         )
 

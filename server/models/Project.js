@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema   = mongoose.Schema;
 
-const ProjectSchema = new Schema({
+const projectSchema = new Schema({
     templates: { type: String, enum: ['searcher','onlineService','socialNetwork','onlineShop'] },
     code: String
 }, {
@@ -11,5 +11,5 @@ const ProjectSchema = new Schema({
   }
 });
 
-const Project = mongoose.model('Project', ProjectSchema);
+const Project = mongoose.model('Project', projectSchema);
 module.exports = Project;

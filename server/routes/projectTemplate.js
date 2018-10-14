@@ -9,7 +9,7 @@ const Project = require('../models/Project');
 //const passport = require('passport');
 
 
-const newProject = (req, project) => {
+const projectTemplate = (req, project) => {
   
 }
 
@@ -48,13 +48,11 @@ router.post('/templates', (req, res, next) => {
 // });
 
 // 
-// router.get('/currentuser', (req,res,next) => {
-  // if(req.user){
-    // res.status(200).json(req.user);
-  // }else{
-    // next(new Error('Not logged in'))
-  // }
-// })
+ router.get('/projectTemplate', (req,res,next) => {
+    let projectId = req.params.projectId
+    Project.findOne({project: projectId})
+    .then(templates => res.json(projects)
+  ) //templates de js front y projects de base datos
 // 
 // 
 // router.get('/logout', (req,res) => {
@@ -65,6 +63,6 @@ router.post('/templates', (req, res, next) => {
 // 
 // router.use((err, req, res, next) => {
   // res.status(500).json({ message: err.message });
-// })
-
-module.exports = router;
+})
+ 
+module.exports = projectTemplate;
