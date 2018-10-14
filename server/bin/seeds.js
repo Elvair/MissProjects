@@ -29,6 +29,18 @@ let users = [
   {
     username: "bob",
     password: bcrypt.hashSync("bob", bcrypt.genSaltSync(bcryptSalt)),
+  },
+  {
+    username: "mariquilla",
+    password: bcrypt.hashSync("mariquilla", bcrypt.genSaltSync(bcryptSalt)),
+  },
+  {
+    username: "demiurgo",
+    password: bcrypt.hashSync("demiurgo", bcrypt.genSaltSync(bcryptSalt)),
+  },
+  {
+    username: "arsenico",
+    password: bcrypt.hashSync("arsenico", bcrypt.genSaltSync(bcryptSalt)),
   }
 ]
 

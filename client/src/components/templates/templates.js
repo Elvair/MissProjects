@@ -15,7 +15,7 @@ class templates extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:3010/project')
+        axios.get('http://localhost:3010/projectTemplate')
             .then((response) => {
                 console.log(response.data)
                 this.setState({ posts: response.data });
@@ -27,18 +27,7 @@ class templates extends Component {
         return (
             <div id="main">
                 {this.state.posts[0] !== undefined ? this.state.posts.map(x => <p>{x.templates}</p>) : ''}
-                <header>
-                    <div className="wrapper">
-                        <nav>
-                            <h1>Main Navigation</h1>
-                            <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Templates</a></li>
-                                <li><a href="#">Login</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </header>
+                
             </div>
         )
     }
