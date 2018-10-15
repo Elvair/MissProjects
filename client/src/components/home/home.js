@@ -1,44 +1,33 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 import './home.css';
 import axios from 'axios';
 
 
-class home extends Component { 
+class home extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-          posts: [],
-          loading: true,
+            posts: [],
+            loading: true,
         };
-      }
+    }
 
-      componentDidMount() {
+    componentDidMount() {
         axios.get('http://localhost:3010/')
-        .then( (response) => {
-            console.log(response.data)
+            .then((response) => {
+                console.log(response.data)
                 this.setState({ posts: response.data });
-        
-      })
-      }
+
+            })
+    }
 
     render() {
-            return (
+        return (
             <div id="main">
-            { this.state.posts[0] !== undefined ? this.state.posts.map(x=><p>{x.templates}</p>) : ''}
-                {/* <header>
-                    <div className="wrapper">
-                        <nav>
-                            <h1>Main Navigation</h1>
-                            <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Templates</a></li>
-                                <li><a href="#">Login</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </header> */}
+                {this.state.posts[0] !== undefined ? this.state.posts.map(x => <p>{x.templates}</p>) : ''}
+
             </div>
         )
 

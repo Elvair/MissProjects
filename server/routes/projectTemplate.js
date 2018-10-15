@@ -10,13 +10,13 @@ router.get('/',(req,res,next) => {
 })
 
 router.post('/',(req,res,next) => {
-  const { name, birthday } = req.body;
-  console.log(name, birthday, "entra");
+  const { template, code } = req.body;
+  console.log(template, code, "entra");
   console.log(req.body);
   
   Project.create({
-    name,
-    birthday
+    template,
+    code
   })
       .then( objProject => res.status(200).json(objProject))
       .catch(e => next(e))

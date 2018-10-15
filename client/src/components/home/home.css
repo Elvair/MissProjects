@@ -11,3 +11,9 @@ ul{
     font-family: "Montserrat", sans-serif;
 }
 
+#main { 
+    align-content: center;
+    justify-content: center;
+    margin: 10px;
+}
+

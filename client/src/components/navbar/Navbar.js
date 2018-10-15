@@ -24,6 +24,10 @@ class Navbar extends Component {
     if (this.state.loggedInUser) {
       return (
         <nav className="nav-style">
+                    <ul>
+            <li><Link to='/home'>Home</Link></li>
+            <li><Link to='/templates'>Templates</Link></li>
+            </ul>
           <ul>
             <li><a onClick={this.handleLogout}>Logout</a></li>
           </ul>
@@ -37,11 +41,12 @@ class Navbar extends Component {
           <nav className="nav-style">
             <ul>
             <li><Link to='/home'>Home</Link></li>
-            <li><Link to='/templates'>Templates</Link></li>
             <li><Link to='/signup'>Signup</Link></li>
             <li><Link to='/login'>Login</Link></li>
             </ul>
           </nav>
+          <div>
+          </div>
         </div>
       )
     }

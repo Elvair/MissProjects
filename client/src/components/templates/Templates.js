@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-//import { Link } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
 //import AuthService from '../auth/AuthService';
 import './templates.css';
 import axios from 'axios';
 
-class templates extends Component {
+class Templates extends Component {
 
     constructor(props) {
         super(props);
@@ -26,7 +26,7 @@ class templates extends Component {
     render() {
         return (
             <div id="main">
-                {this.state.posts[0] !== undefined ? this.state.posts.map(x => <p>{x.templates}</p>) : ''}
+                {this.state.posts[0] !== undefined ? this.state.posts.map(x => <div><p>{x.templates}</p><Link to={`/${x.templates}`}>Link</Link></div>) : ''}
                 
             </div>
         )
@@ -35,7 +35,7 @@ class templates extends Component {
 }
 
 
-export default templates;
+export default Templates;
 
 
 

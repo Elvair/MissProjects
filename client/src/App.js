@@ -2,17 +2,12 @@ import React, { Component } from 'react';
 import './App.css';
 import { Switch, Route, Link } from 'react-router-dom';
 import Home from './components/home/home';
-
-// import ProjectList from './components/projects/ProjectList';
 import Navbar from './components/navbar/Navbar';
-// import ProjectDetails from './components/projects/ProjectDetails';
 import Signup from './components/auth/Signup';
 import Login from './components/auth/Login';
 import AuthService from './components/auth/AuthService';
 import Contents from './components/contents/Contents';
-
-import Templates from './components/templates/templates';
-
+import Templates from './components/templates/Templates';
 
 class App extends Component {
 
@@ -60,6 +55,7 @@ class App extends Component {
           <header className="App-header">
             <Navbar userInSession={this.state.loggedInUser} logout={this.logout} />
             <Contents></Contents>
+            <Templates></Templates>
           </header>
         </div>
       );
@@ -70,7 +66,6 @@ class App extends Component {
             <Navbar userInSession={this.state.loggedInUser} logout={this.logout} />
             <Switch>
               <Route exact path='/home' render={() => <Home />}/>
-              <Route exact path='/templates' render={() => <Templates />}/>
               <Route exact path='/signup' render={() => <Signup getUser={this.getTheUser}/>}/>
               <Route exact path='/login' render={() => <Login getUser={this.getTheUser}/>}/>
             </Switch>

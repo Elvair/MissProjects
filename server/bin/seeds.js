@@ -47,7 +47,10 @@ let users = [
 let projects = [
   {
     templates: "searcher",
-    code: "<h1>Searcher</h1>"
+    code: `
+    <h1 style=background-color:red;>Searcher</h1>
+    <p>Hola Giorgio<p>
+    `
     
   },
   {
