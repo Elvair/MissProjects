@@ -4,10 +4,14 @@ const apiAxios = 'http://localhost:3010/';
 
 
 
-export const getProjects = () => {
+ const getProjects = () => {
    return axios.get(apiAxios)
     .then(function (response) {
         console.log(response)
         return response
       })
 }
+const search = () => {
+  ...
+}
+export{getProjects}

@@ -50,11 +50,7 @@ app.use(cookieParser());
 
 // Express View engine setup
 
-app.use(require('node-sass-middleware')({
-  src: path.join(__dirname, 'public'),
-  dest: path.join(__dirname, 'public'),
-  sourceMap: true
-}));
+
 
 app.use(session({
   secret: 'angular auth passport secret shh',
@@ -69,14 +65,6 @@ app.use(session({
 require('./passport')(app);
 
 
-
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'hbs');
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
-
-
-
 // default value for title local
 app.locals.title = 'Express - Generated with IronGenerator';
 
@@ -86,15 +74,10 @@ app.use('/',api);
 
 const authRouter = require('./routes/auth');
 const projectTemplateRouter = require('./routes/projectTemplate');
+const searchRouter = require ('./routes/searchBack');
 
-//const contentsRouter = require ('./routes/contents')
-// const genericCrud = require('./routes/genericCRUD');
 app.use('/api/auth', authRouter);
 app.use('/projectTemplate',projectTemplateRouter);
-//app.use('/contents/',contentsRouter);
-// app.use('/api/news', genericCrud(require('./models/News')));
-// app.use('/api/user', genericCrud(require('./models/User')));
-
-
+app.use('/search', searchRouter);
 
 module.exports = app;

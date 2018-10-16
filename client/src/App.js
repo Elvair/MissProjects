@@ -8,6 +8,7 @@ import Login from './components/auth/Login';
 import AuthService from './components/auth/AuthService';
 import Contents from './components/contents/Contents';
 import Templates from './components/templates/Templates';
+import Search from './components/search/search';
 
 class App extends Component {
 
@@ -56,6 +57,7 @@ class App extends Component {
             <Navbar userInSession={this.state.loggedInUser} logout={this.logout} />
             <Contents></Contents>
             <Templates></Templates>
+            <Search></Search>
           </header>
         </div>
       );
