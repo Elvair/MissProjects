@@ -49,13 +49,14 @@ let projects = [
     templates: "searcher",
     code: `
     <h1 style=background-color:red;>Searcher</h1>
-    <p>Hola Giorgio<p>
-    `
+    <p>Hola Giorgio<p>`
+        
     
   },
   {
     templates: "onlineService",
-    code: "<h1>Online Service</h1>"
+    code: "<h1>Online Service</h1>",
+    author: "Giorgio"
     
   },
   {

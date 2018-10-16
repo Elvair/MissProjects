@@ -3,7 +3,9 @@ const Schema   = mongoose.Schema;
 
 const projectSchema = new Schema({
     templates: { type: String, enum: ['searcher','onlineService','socialNetwork','onlineShop'] },
-    code: String
+    author: String,
+    code: String,
+    links: String
 }, {
   timestamps: {
     createdAt: 'created_at',
