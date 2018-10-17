@@ -58,6 +58,7 @@ class App extends Component {
             <Contents></Contents>
             <Templates></Templates>
             <Search></Search>
+            {/* <clase Padre Search(con state que guarda)renderiza search y otro componente para listar resultados función. PAdre contiene a search> */}
           </header>
         </div>
       );
