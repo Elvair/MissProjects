@@ -12,6 +12,8 @@ const apiAxios = 'http://localhost:3010/';
       })
 }
 const search = () => {
-  ...
+  return axios.get(apiAxios)
 }
-export{getProjects}
+
+
+export{getProjects,search}
