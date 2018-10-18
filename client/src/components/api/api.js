@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 
-const apiAxios = 'http://localhost:3010/';
+const apiAxios = `${process.env.REACT_APP_API_URL}/`;
 
 
 
