@@ -11,8 +11,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build-dev": "dotenv -e .env.development react-scripts build", 
-    "build-prod": "dotenv -e .env.production react-scripts build",
+    "build-dev": "dotenv -e .env.development react-scripts build",
+    "build-prod": "REACT_APP_API_URL=https://missprojects.herokuapp.com react-scripts build",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
@@ -25,5 +25,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "ws": "3.3.2"
+  }
 }

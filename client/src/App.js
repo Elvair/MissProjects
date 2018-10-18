@@ -16,7 +16,7 @@ class App extends Component {
 
   constructor(props){
     super(props)
-    this.state = { loggedInUser: null };
+    this.state = { loggedInUser: null, loading: true };
     this.service = new AuthService();
   }
 
@@ -48,7 +48,11 @@ class App extends Component {
       })
     }
   }
-
+  
+  drawSocial = (socialPosts) => {
+    this.setState({posts: socialPosts, loading: false})
+  }
+  
   render() {
     this.fetchUser()
 
@@ -58,12 +62,12 @@ class App extends Component {
           <header className="App-header">
             <Navbar userInSession={this.state.loggedInUser} logout={this.logout} />
             <Contents></Contents>
-            <Templates></Templates>
+            <Templates drawSocial={this.drawSocial}></Templates>
             <Switch>
                  <Route exact path='/home' render={() => <Home />}/>
                  <Route exact path='/template/onlineService' render={({match}) => <OnlineService params={match.params}/>}/>
                  <Route exact path='/template/onlineShop' render={({match}) => <OnlineShop params={match.params}/>}/>
-                 <Route exact path='/template/socialNetwork' render={({match}) => <SocialNetwork params={match.params}/>}/>
+                <Route exact path='/template/socialNetwork' render={({match}) => <div>{(!this.state.loading)?<SocialNetwork posts={this.state.posts} params={match.params}/> : <div></div>}</div>}/>
             </Switch>
           </header>
         </div>

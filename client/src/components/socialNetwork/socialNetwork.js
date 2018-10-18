@@ -1,15 +1,29 @@
-import React from 'react';
-// import {Link} from 'react-dom';
+import React, {Component} from 'react';
+import {Link} from 'react-dom';
 
-const socialNetwork = ({params}) => {
-    console.log(params)
-    return (
-        // <div id="socialNetwork">
-        //     {this.state.posts[0] !== undefined ? this.state.posts.map(x => <div><p>{x.templates}</p><Link to={`/${x.templates}`}>Link</Link></div>) : ''}        
-        // </div>
-        <div>
-            <p>{params.template}</p>
-        </div>
-    )
-}    
-export default socialNetwork
+
+class socialNetwork extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            posts: [],
+            loading: false,
+        };
+    }
+     
+    render() {
+        let socialPost = this.props.posts.filter(params => {return params.templates === "socialNetwork"})
+        console.log(socialPost)
+        return (
+            <div id="socialNetwork">
+                {this.state.posts.map(socials => <p>{socials.templates}</p>)}      
+            </div>
+         
+        )
+    }
+
+}
+
+        
+export default socialNetwork;

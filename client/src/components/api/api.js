@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 
-const apiAxios = `${process.env.REACT_APP_API_URL}/`;
+const apiAxios = 'http://localhost:3010/';
 
 
 
@@ -21,5 +21,12 @@ const getSearch = ({author, template}) => {
   })
 }
 
+const getTypeTemplate = ({template}) => {
+   return axios.get(`${apiAxios}search?${template}`)
+  .then ((typeTem) => {
+    return typeTem.data
+  })
+}
 
-export {getProjects, getSearch};
+
+export {getProjects, getSearch, getTypeTemplate};
