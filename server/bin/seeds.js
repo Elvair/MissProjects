@@ -46,28 +46,64 @@ let users = [
 
 let projects = [
   {
-    templates: "searcher",
-    code: `
-    <h1 style=background-color:red;>Searcher</h1>
-    <p>Hola Giorgio<p>`
-        
-    
+    templates: "onlineService",
+    author: "Raúl Martín",
+    links: "https://github.com/robotic-amoeba/Euscite"
   },
   {
     templates: "onlineService",
-    code: "<h1>Online Service</h1>",
-    author: "Giorgio"
-    
+    author: "Adrián Melián",
+    links: "https://github.com/AdrianMelGon/Proyecto-Final"   
+  },
+  {
+    templates: "onlineService",
+    author: "Dennis R. Lema",
+    links: "https://github.com/Blachlock/FamCall"   
+  },
+  {
+    templates: "onlineService",
+    author: "Cristian Tejedor",
+    links: "https://github.com/FiboGuy/PetHealth"    
+  },
+  {
+    templates: "onlineService",
+    author: "Christian López & Teo Díaz",
+    links: "https://github.com/You2se/YouChoose"    
+  },
+  {
+    templates: "onlineService",
+    author: "Laura Migueláñez",
+    links: "https://github.com/lauramiguelanez/Scope"    
+  },
+  {
+    templates: "onlineService",
+    author: "Esperanza Amaya",
+    links: "https://github.com/eamayag/IH-labs-3rd-project---ReadMe-"    
   },
   {
     templates: "socialNetwork",
-    code: "<h1>Social Network</h1>"
-    
+    author: "Jacob Casado",
+    links: "https://github.com/JacobCasado/Yayoo"
+  },
+  {
+    templates: "socialNetwork",
+    author: "Laura Corral",
+    links: "https://github.com/Evenstarw1/MeetArt"
+  },
+  {
+    templates: "socialNetwork",
+    author: "Celia Arnelas",
+    links: "https://github.com/Carnelas/BeGreen"
+  },
+  {
+    templates: "socialNetwork",
+    author: "Jhon Scarzo",
+    links: "https://github.com/JScarzo/ConectArtT-React"
   },
   {
     templates: "onlineShop",
-    code: "<h1>Online Shop</h1>"
-    
+    author: "Alfonso Mateo",
+    links: "https://github.com/FonRiego/BoardGameMarket" 
   }
 ]
 

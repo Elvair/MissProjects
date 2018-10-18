@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema   = mongoose.Schema;
 
 const projectSchema = new Schema({
-    templates: { type: String, enum: ['searcher','onlineService','socialNetwork','onlineShop'] },
+    templates: { type: String, enum: ['onlineService','socialNetwork','onlineShop'] },
     author: String,
     code: String,
     links: String

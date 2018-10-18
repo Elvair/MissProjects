@@ -3,20 +3,21 @@ import  {getSearch}  from '../api/api';
 
 class search extends Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             author: "",
             template: ""
         };
-
+        this.props = props;
     }
     changeName({ name, value }) {
         this.setState({ [name]: value })
     }
     toClick = () =>{
+        console.log(this.props)
         getSearch(this.state)
-        .then(res => console.log(res))
+        .then(res => this.props.changeSearch(res));
     }
     render() {
         return (

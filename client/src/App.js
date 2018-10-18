@@ -8,7 +8,7 @@ import Login from './components/auth/Login';
 import AuthService from './components/auth/AuthService';
 import Contents from './components/contents/Contents';
 import Templates from './components/templates/Templates';
-import Search from './components/search/search';
+import DadSearch from './components/dadSearch/dadSearch';
 
 class App extends Component {
 
@@ -37,12 +37,12 @@ class App extends Component {
       .then(response =>{
         this.setState({
           loggedInUser:  response
-        }) 
+        })
       })
       .catch( err =>{
         this.setState({
           loggedInUser:  false
-        }) 
+        })
       })
     }
   }
@@ -57,7 +57,7 @@ class App extends Component {
             <Navbar userInSession={this.state.loggedInUser} logout={this.logout} />
             <Contents></Contents>
             <Templates></Templates>
-            <Search></Search>
+            <DadSearch></DadSearch>
             {/* <clase Padre Search(con state que guarda)renderiza search y otro componente para listar resultados función. PAdre contiene a search> */}
           </header>
         </div>
