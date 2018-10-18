@@ -26,8 +26,10 @@ class Templates extends Component {
     render() {
         return (
             <div id="main">
-                {this.state.posts[0] !== undefined ? this.state.posts.map(x => <div><p>{x.templates}</p><Link to={`/${x.templates}`}>Link</Link></div>) : ''}
-                
+                {/* {this.state.posts[0] !== undefined ? this.state.posts.map(x => <div><p>{x.templates}</p><Link to={`/${x.templates}`}>Link</Link></div>) : ''} */}
+                <Link to="/template/socialNetwork">Social Network</Link>
+                <Link to="/template/onlineService">onlineService</Link>
+                <Link to="/template/onlineShop">onlineService</Link>
             </div>
         )
     }

@@ -7,8 +7,9 @@ import Signup from './components/auth/Signup';
 import Login from './components/auth/Login';
 import AuthService from './components/auth/AuthService';
 import Contents from './components/contents/Contents';
-import Templates from './components/templates/Templates';
-import DadSearch from './components/dadSearch/dadSearch';
+import OnlineService from './components/onlineService/onlineService';
+import OnlineShop from './components/onlineShop/onlineShop';
+import SocialNetwork from './components/socialNetwork/socialNetwork';
 
 class App extends Component {
 
@@ -56,9 +57,12 @@ class App extends Component {
           <header className="App-header">
             <Navbar userInSession={this.state.loggedInUser} logout={this.logout} />
             <Contents></Contents>
-            <Templates></Templates>
-            <DadSearch></DadSearch>
-            {/* <clase Padre Search(con state que guarda)renderiza search y otro componente para listar resultados función. PAdre contiene a search> */}
+            <Switch>
+                 <Route exact path='/home' render={() => <Home />}/>
+                 <Route exact path='/template/onlineService' render={({match}) => <OnlineService params={match.params}/>}/>
+                 <Route exact path='/template/onlineShop' render={({match}) => <OnlineShop params={match.params}/>}/>
+                 <Route exact path='/template/socialNetwork' render={({match}) => <SocialNetwork params={match.params}/>}/>
+            </Switch>
           </header>
         </div>
       );
@@ -78,5 +82,6 @@ class App extends Component {
     }
   }
 }
+
 
 export default App;

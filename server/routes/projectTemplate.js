@@ -2,12 +2,6 @@ const express = require('express');
 const router = express.Router();
 const Project = require('../models/Project');
 
-router.get('/:templates',(req,res,next) => {
-  Project.find({templates: req.params.templates})
-    .then(templateOne =>{
-      res.json(templateOne)
-    })
-})
 
 router.get('/',(req,res,next) => {
   
@@ -28,6 +22,13 @@ router.post('/',(req,res,next) => {
   })
       .then( objProject => res.status(200).json(objProject))
       .catch(e => next(e))
+})
+
+router.get('/:templates',(req,res,next) => {
+  Project.find({templates: req.params.templates})
+    .then(templateOne =>{
+      res.json(templateOne)
+    })
 })
 
 module.exports = router;
