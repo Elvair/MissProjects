@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 //import { Link } from 'react-router-dom';
 import axios from 'axios';
 
-import Templates from '../templates/Templates';
+
 import DadSearch from '../dadSearch/dadSearch';
 
 import './home.css';
@@ -30,7 +30,7 @@ class home extends Component {
         return (
             <div id="main">
                 {/* {this.state.posts[0] !== undefined ? this.state.posts.map(x => <p>{x.templates}</p>) : ''} */}
-                <Templates></Templates>
+                
                 <DadSearch></DadSearch>
             </div>
         )
