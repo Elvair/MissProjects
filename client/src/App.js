@@ -7,7 +7,7 @@ import Signup from './components/auth/Signup';
 import Login from './components/auth/Login';
 import AuthService from './components/auth/AuthService';
 import Contents from './components/contents/Contents';
-import Templates from '../templates/Templates';
+import Templates from './components/templates/Templates';
 import OnlineService from './components/onlineService/onlineService';
 import OnlineShop from './components/onlineShop/onlineShop';
 import SocialNetwork from './components/socialNetwork/socialNetwork';
