@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import './templates.css';
 import axios from 'axios';
@@ -25,12 +25,10 @@ class Templates extends Component {
 
     render() {
         return (
-            <div id="main">
-                {/* {this.state.posts[0] !== undefined ? this.state.posts.map(x => <div><p>{x.templates}</p><Link to={`/${x.templates}`}>Link</Link></div>) : ''} */}
+            <div id="main">                
                 <li><Link to="/template/socialNetwork">Social Network</Link></li>
                 <li><Link to="/template/onlineService">onlineService</Link></li>
-                <li><Link to="/template/onlineShop">onlineService</Link></li>
-            
+                <li><Link to="/template/onlineShop">onlineShop</Link></li>            
             </div>
         )
     }

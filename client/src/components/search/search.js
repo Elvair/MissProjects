@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import  {getSearch}  from '../api/api';
+import { getSearch } from '../api/api';
 
 class search extends Component {
 
@@ -14,10 +14,10 @@ class search extends Component {
     changeName({ name, value }) {
         this.setState({ [name]: value })
     }
-    toClick = () =>{
+    toClick = () => {
         console.log(this.props)
         getSearch(this.state)
-        .then(res => this.props.changeSearch(res));
+            .then(res => this.props.changeSearch(res));
     }
     render() {
         return (
@@ -32,10 +32,5 @@ class search extends Component {
             </div>
         )
     }
-
-
 }
-
-
-
 export default search;    

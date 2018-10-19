@@ -29,9 +29,8 @@ class Navbar extends Component {
             <li><Link to='/templates'>Templates</Link></li>
           </ul>
           <ul>
-            <li><a onClick={this.handleLogout}>Logout</a></li>
+            <li><a href='/logout' onClick={this.handleLogout}>Logout</a></li>
           </ul>
-
           <h2>Welcome, {this.state.loggedInUser.username}</h2>
         </nav>
       )

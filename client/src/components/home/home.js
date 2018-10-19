@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
-//import { Link } from 'react-router-dom';
 import axios from 'axios';
-
-
 import DadSearch from '../dadSearch/dadSearch';
-
 import './home.css';
+import Content from '../contents/Contents';
 
 class home extends Component {
 
@@ -22,22 +19,17 @@ class home extends Component {
             .then((response) => {
                 console.log(response.data)
                 this.setState({ posts: response.data });
-
             })
     }
 
     render() {
         return (
             <div id="main">
-                {/* {this.state.posts[0] !== undefined ? this.state.posts.map(x => <p>{x.templates}</p>) : ''} */}
-                
+                <Content></Content>
                 <DadSearch></DadSearch>
+                <p>Please, sign up or login to access! </p>
             </div>
         )
-
     }
-
-
-
 }
 export default home;

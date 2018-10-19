@@ -7,8 +7,8 @@ class dadSearch extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            // author: "",
-            // template: "",
+            author: "",
+            template: "",
             search: []
         };
 
@@ -22,9 +22,7 @@ class dadSearch extends Component {
                 <Search changeSearch={(element) => this.changeSearch(element)} />
                 {this.state.search.map(willRender => <RenderSearch author={willRender}/>)}
             </div>    
-        ) 
-
-
+        )
     }
 }
 

@@ -1,6 +1,4 @@
-import React, {Component} from 'react';
-import {Link} from 'react-dom';
-
+import React, { Component } from 'react';
 
 class socialNetwork extends Component {
 
@@ -11,19 +9,20 @@ class socialNetwork extends Component {
             loading: false,
         };
     }
-     
+
     render() {
-        let socialPost = this.props.posts.filter(params => {return params.templates === "socialNetwork"})
+        let socialPost = this.props.posts.filter(params => { return params.templates === "socialNetwork" })
         console.log(socialPost)
         return (
             <div id="socialNetwork">
-                {this.state.posts.map(socials => <p>{socials.templates}</p>)}      
+                {socialPost.map((socials, i) =>
+                    <div key={i}>
+                        <p>{socials.author}</p>
+                        <a href={socials.links}>{socials.links}</a>
+                    </div>
+                )}
             </div>
-         
         )
     }
-
 }
-
-        
 export default socialNetwork;

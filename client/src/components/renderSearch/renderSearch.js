@@ -1,6 +1,6 @@
 import React from 'react';
 
- const renderSearch = ({author}) => {
+ const renderSearch = ({author, templates}) => {
     return (
         <div>
             <p>{author.author}</p>

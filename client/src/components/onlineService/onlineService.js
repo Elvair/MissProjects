@@ -1,12 +1,28 @@
-import React from 'react';
+import React, { Component } from 'react';
 
+class onlineService extends Component {
 
-const onlineService = ({params}) => {
-    console.log(params)
-    return (
-        <div>  
-            <p>{params.template}</p>
-        </div>
-    )
-}    
+    constructor(props) {
+        super(props);
+        this.state = {
+            posts: [],
+            loading: false,
+        };
+    }
+
+    render() {
+        let servicePost = this.props.posts.filter(params => { return params.templates === "onlineService" })
+        console.log(servicePost)
+        return (
+            <div id="socialNetwork">
+                {servicePost.map((services, i) =>
+                    <div key={i}>
+                        <p>{services.author}</p>
+                        <a href={services.links}>{services.links}</a>
+                    </div>
+                )}
+            </div>
+        )
+    }
+}
 export default onlineService;

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Switch, Route, Link } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import Home from './components/home/home';
 import Navbar from './components/navbar/Navbar';
 import Signup from './components/auth/Signup';
@@ -52,6 +52,12 @@ class App extends Component {
   drawSocial = (socialPosts) => {
     this.setState({posts: socialPosts, loading: false})
   }
+  drawShop = (shopPost) => {
+    this.setState({posts: shopPost, loading: false})
+  }
+  drawService = (servicePost) => {
+    this.setState({posts: servicePost, loading: false})
+  }
   
   render() {
     this.fetchUser()
@@ -65,8 +71,8 @@ class App extends Component {
             <Templates drawSocial={this.drawSocial}></Templates>
             <Switch>
                  <Route exact path='/home' render={() => <Home />}/>
-                 <Route exact path='/template/onlineService' render={({match}) => <OnlineService params={match.params}/>}/>
-                 <Route exact path='/template/onlineShop' render={({match}) => <OnlineShop params={match.params}/>}/>
+                 <Route exact path='/template/onlineService' render={({match}) => <div>{(!this.state.loading)?<OnlineService posts={this.state.posts} params={match.params}/> : <div></div>}</div>}/>
+                 <Route exact path='/template/onlineShop' render={({match}) => <div>{(!this.state.loading)?<OnlineShop posts={this.state.posts} params={match.params}/> : <div></div>}</div>}/>
                 <Route exact path='/template/socialNetwork' render={({match}) => <div>{(!this.state.loading)?<SocialNetwork posts={this.state.posts} params={match.params}/> : <div></div>}</div>}/>
             </Switch>
           </header>
