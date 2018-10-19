@@ -14,7 +14,7 @@ const apiAxios = 'http://localhost:3010/';
 
 const getSearch = ({author, template}) => {
   author ? author = `author=${author}` : author = ''
-  template ? template = `template=${template}` : template = ''
+  template ? template = `templates=${template}` : template = ''
   return axios.get(`${apiAxios}search?${author}&${template}`)
   .then((searched) => {
     return searched.data

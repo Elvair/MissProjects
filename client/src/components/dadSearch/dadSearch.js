@@ -9,12 +9,14 @@ class dadSearch extends Component {
         this.state = {
             author: "",
             template: "",
+            links:"",
             search: []
         };
 
     }
     changeSearch(newSearch){
         this.setState({search: newSearch})
+        console.log(newSearch)
     }
     render() {
         return (

@@ -15,7 +15,6 @@ class search extends Component {
         this.setState({ [name]: value })
     }
     toClick = () => {
-        console.log(this.props)
         getSearch(this.state)
             .then(res => this.props.changeSearch(res));
     }

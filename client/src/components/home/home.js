@@ -27,7 +27,6 @@ class home extends Component {
             <div id="main">
                 <Content></Content>
                 <DadSearch></DadSearch>
-                <p>Please, sign up or login to access! </p>
             </div>
         )
     }
