@@ -1,12 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
  const renderSearch = ({author, links}) => {
     return (
         <div>
-            <p>{author.author}</p>
-            <a href={author.links}>Link</a>
+            <p>{author.author}:  <a href={author.links}>{author.links}</a></p>
         </div>
     )
 }
+
 export default renderSearch;

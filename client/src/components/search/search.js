@@ -27,7 +27,7 @@ class search extends Component {
                     <option value="onlineShop">Online Shop</option>
                     <option value="socialNetwork">Social Network</option>
                 </select>
-                <button onClick={() => this.toClick()}>Search</button>
+                <button className="but" onClick={() => this.toClick()}>Search</button>
             </div>
         )
     }

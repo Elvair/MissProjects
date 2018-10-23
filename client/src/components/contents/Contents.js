@@ -3,10 +3,10 @@ import React, { Component } from 'react';
 class Contents extends Component {
   render() {
     return (<div>
-        <p>Welcome to Miss Projects, here you will find the necessary resources
-          to develop a web project from beginning, thanks to practical examples
+        <h1>Welcome to Miss Projects, here you will find the necessary resources
+          to develop a web project from the beginning, from practical examples
           of the Ironhack students.  
-        </p>
+        </h1>
         </div>);
     
   }

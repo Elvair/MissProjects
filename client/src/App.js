@@ -12,6 +12,7 @@ import OnlineService from './components/onlineService/onlineService';
 import OnlineShop from './components/onlineShop/onlineShop';
 import SocialNetwork from './components/socialNetwork/socialNetwork';
 
+
 class App extends Component {
 
   constructor(props){
@@ -67,8 +68,8 @@ class App extends Component {
         <div className="App">
           <header className="App-header">
             <Navbar userInSession={this.state.loggedInUser} logout={this.logout} />
-            <Contents></Contents>
-            <Templates drawSocial={this.drawSocial}></Templates>
+            <Contents></Contents>            
+            <Templates drawSocial={this.drawSocial}></Templates>           
             <Switch>
                  <Route exact path='/home' render={() => <Home />}/>
                  <Route exact path='/template/onlineService' render={({match}) => <div>{(!this.state.loading)?<OnlineService posts={this.state.posts} params={match.params}/> : <div></div>}</div>}/>
